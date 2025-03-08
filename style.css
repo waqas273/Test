@@ -1,0 +1,126 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Form styles */
+.user-form {
+    margin-bottom: 1em;
+}
+
+.user-form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    box-sizing: border-box;
+}
+
+.user-form button {
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.user-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75em;
+    text-align: left;
+}
+
+.remove-btn {
+    padding: 0.25em 0.5em;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive table design */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr { 
+        border: 1px solid #ccc; 
+        margin-bottom: 0.5em;
+    }
+    
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    /* Labels for each cell */
+    td:nth-of-type(1):before { content: "ID"; }
+    td:nth-of-type(2):before { content: "Name"; }
+    td:nth-of-type(3):before { content: "Email"; }
+    td:nth-of-type(4):before { content: "Action"; }
+}
+
+/* Message styling */
+.message {
+    padding: 0.5em;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
